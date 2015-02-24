@@ -134,11 +134,12 @@ $(document).ready(function() {
 				<option value=''>Seleccione</option>
 				<?php
 				$selectHtml = '';
-				$shopsArray = $control->getAllShops();
-				foreach($shopsArray as $shop)
-				{
-					$selectHtml .= "<option value='". $shop['id'] ."'>". $shop['name'] ."</option>";
-				}
+                session_start();
+                $shopsArray = $_SESSION['alowedShops'];
+                foreach($shopsArray as $id => $val)
+                {
+                    $selectHtml .= "<option value='". $id ."'>". $val ."</option>";
+                }
 				
 				echo $selectHtml;
 				?>

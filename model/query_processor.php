@@ -654,8 +654,8 @@ class QueryProcessor
 		
 		return $stores_array;
 	}
-	
-	// Return an array of all shop's ids and names
+
+    // Return an array of all shop's ids and names
 	public function query_shops_array($where = '')
 	{
 		if( !empty($where) )
@@ -1004,23 +1004,46 @@ class QueryProcessor
 	public function query_kardex_stock($tyre_id, $store_id, $shop_id)
 	{
 		$where = '';
-		
-		if( !empty($tyre_id) )
+        $placesWhere = '';
+
+        if( !empty($tyre_id) )
 			$where = " AND s.tyre_id = $tyre_id ";
 		
 		if( !empty($store_id) )
 			$where .= " AND s.store_id = $store_id ";
+        else
+        {
+            $storesArray = $_SESSION['alowedStores'];
+            foreach($storesArray as $id => $val)
+            {
+                $placesWhere .= " s.store_id = $id OR ";
+            }
+        }
 		
 		if( !empty($shop_id) )
 			$where .= " AND s.shop_id = $shop_id ";
+        else
+        {
+            $shopsArray = $_SESSION['alowedShops'];
+            foreach($shopsArray as $id => $val)
+            {
+                $placesWhere .= " s.shop_id = $id OR ";
+            }
+        }
+
+        if(!empty($placesWhere))
+            $placesWhere = ' AND (' . substr($placesWhere, 0, strlen($placesWhere) - 3) . ') ';
+
+        $where .= $placesWhere;
+
 		
 		$query = 'SELECT quantity, s.tyre_id, tyre_size, tyre_brand, tyre_code, store_id, shop_id FROM '.self::DB_TABLE_STOCK.' as s, 
 															'.self::DB_TABLE_TYRE." as t 
 													WHERE s.tyre_id = t.tyre_id AND s.quantity != 0 
 														$where 
 													ORDER BY tyre_brand, tyre_size, tyre_code";
-		
-		if( !($resulSet = $this->_bd->query($query)) )
+
+        if( !($resulSet = $this->_bd->query($query)) )
 			return array();
 		
 		$movements_array = array();

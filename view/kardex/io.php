@@ -155,16 +155,24 @@ $(document).ready(function() {
 				<option value=''>Seleccione</option>
 				<?php
 				$selectHtml = '';
-				$storesArray = $control->getAllStores();
-				foreach($storesArray as $store)
+				//$storesArray = $control->getAllStores();
+                session_start();
+				$storesArray = $_SESSION['alowedStores'];
+				//foreach($storesArray as $store)
+                foreach($storesArray as $id => $val)
 				{
-					$selectHtml .= "<option value='store-". $store['id'] ."'>DEPOSITO: ". $store['name'] ."</option>";
+					$selectHtml .= "<option value='store-". $id ."'>DEPOSITO: ". $val ."</option>";
+                    //$selectHtml .= "<option value='store-". $store['id'] ."'>DEPOSITO: ". $store['name'] ."</option>";
 				}
-				
-				$shopsArray = $control->getAllShops();
-				foreach($shopsArray as $shop)
+
+				//$shopsArray = $control->getAllShops();
+				$shopsArray = $_SESSION['alowedShops'];
+
+                //foreach($shopsArray as $shop)
+                foreach($shopsArray as $id => $val)
 				{
-					$selectHtml .= "<option value='shop-". $shop['id'] ."'>TIENDA: ". $shop['name'] ."</option>";
+                    //$selectHtml .= "<option value='shop-". $shop['id'] ."'>TIENDA: ". $shop['name'] ."</option>";
+					$selectHtml .= "<option value='shop-". $id ."'>TIENDA: ". $val ."</option>";
 				}
 				
 				echo $selectHtml;

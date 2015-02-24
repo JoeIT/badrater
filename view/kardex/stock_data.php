@@ -35,8 +35,11 @@ $colLimiter = '|';
 
 if( empty($storeId) && empty($shopId) )
 {
-	$storesArr = $control->getAllStores();
-	$shopsArr = $control->getAllShops();
+	//$storesArr = $control->getAllStores();
+	//$shopsArr = $control->getAllShops();
+    session_start();
+	$storesArr = $_SESSION['alowedStores'];
+	$shopsArr = $_SESSION['alowedShops'];
 
 	$cols = 4 + count($storesArr) + count($shopsArr);
 	$widhtPercent = 100 / ($cols + 3);
@@ -114,17 +117,23 @@ if( empty($storeId) && empty($shopId) )
 	
 	$dataHeader = 'Medida' . $colLimiter . 'Marca' . $colLimiter . 'Codigo';
 	
-	foreach($storesArr as $store)
+	//foreach($storesArr as $store)
+    foreach($storesArr as $id => $val)
 	{
-		$html .= "<th width='$widhtPercent%'>".$store['name']."</th>";
-		
-		$dataHeader .= $colLimiter . $store['name'];
+		//$html .= "<th width='$widhtPercent%'>".$store['name']."</th>";
+		$html .= "<th width='$widhtPercent%'>".$val."</th>";
+
+		//$dataHeader .= $colLimiter . $store['name'];
+		$dataHeader .= $colLimiter . $val;
 	}
-	foreach($shopsArr as $shop)
+	//foreach($shopsArr as $shop)
+    foreach($shopsArr as $id => $val)
 	{
-		$html .= "<th width='$widhtPercent%'>".$shop['name']."</th>";
-		
-		$dataHeader .= $colLimiter . $shop['name'];
+		//$html .= "<th width='$widhtPercent%'>".$shop['name']."</th>";
+		$html .= "<th width='$widhtPercent%'>".$val."</th>";
+
+		//$dataHeader .= $colLimiter . $shop['name'];
+		$dataHeader .= $colLimiter . $val;
 	}
 
 	$html .= "<th width='$widhtPercent%'>Total</th>
@@ -142,13 +151,17 @@ if( empty($storeId) && empty($shopId) )
 		
 		$dataTable .= $row['tyre_size'] . $colLimiter . $row['tyre_brand'] . $colLimiter . $row['tyre_code'];
 		
-		foreach($storesArr as $store)
+		//foreach($storesArr as $store)
+        foreach($storesArr as $id => $val)
 		{
-			if( isset($row[ 'store'.$store['id'] ] ) )
+			//if( isset($row[ 'store'.$store['id'] ] ) )
+			if( isset($row[ 'store'.$id ] ) )
 			{
-				$html .= '<td align="right">'.$row[ 'store'.$store['id'] ].'</td>';
-				
-				$dataTable .= $colLimiter . $row[ 'store'.$store['id'] ];
+				//$html .= '<td align="right">'.$row[ 'store'.$store['id'] ].'</td>';
+				$html .= '<td align="right">'.$row[ 'store'.$id ].'</td>';
+
+				//$dataTable .= $colLimiter . $row[ 'store'.$store['id'] ];
+				$dataTable .= $colLimiter . $row[ 'store'.$id ];
 			}
 			else
 			{
@@ -158,13 +171,17 @@ if( empty($storeId) && empty($shopId) )
 			}
 		}
 		
-		foreach($shopsArr as $shop)
+		//foreach($shopsArr as $shop)
+        foreach($shopsArr as $id => $val)
 		{
-			if( isset($row[ 'shop'.$shop['id'] ] ) )
+			//if( isset($row[ 'shop'.$shop['id'] ] ) )
+			if( isset($row[ 'shop'.$id ] ) )
 			{
-				$html .= '<td align="right">'.$row[ 'shop'.$shop['id'] ].'</td>';
-				
-				$dataTable .= $colLimiter . $row[ 'shop'.$shop['id'] ];
+				//$html .= '<td align="right">'.$row[ 'shop'.$shop['id'] ].'</td>';
+				$html .= '<td align="right">'.$row[ 'shop'.$id ].'</td>';
+
+				//$dataTable .= $colLimiter . $row[ 'shop'.$shop['id'] ];
+				$dataTable .= $colLimiter . $row[ 'shop'.$id ];
 			}
 			else
 			{

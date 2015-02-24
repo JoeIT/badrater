@@ -104,17 +104,18 @@ $(document).ready(function() {
 				<option value=''>Todos los lugares</option>
 				<?php
 				$selectHtml = '';
-				$storesArray = $control->getAllStores();
-				foreach($storesArray as $store)
-				{
-					$selectHtml .= "<option value='store-". $store['id'] ."'>DEPOSITO: ". $store['name'] ."</option>";
-				}
-				
-				$shopsArray = $control->getAllShops();
-				foreach($shopsArray as $shop)
-				{
-					$selectHtml .= "<option value='shop-". $shop['id'] ."'>TIENDA: ". $shop['name'] ."</option>";
-				}
+				session_start();
+                $storesArray = $_SESSION['alowedStores'];
+                foreach($storesArray as $id => $val)
+                {
+                    $selectHtml .= "<option value='store-". $id ."'>DEPOSITO: ". $val ."</option>";
+                }
+
+                $shopsArray = $_SESSION['alowedShops'];
+                foreach($shopsArray as $id => $val)
+                {
+                    $selectHtml .= "<option value='shop-". $id ."'>TIENDA: ". $val ."</option>";
+                }
 				
 				echo $selectHtml;
 				?>

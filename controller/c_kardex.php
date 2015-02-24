@@ -14,8 +14,8 @@ class ControllerKardex
 	{
 		return $this->_qp->query_stores_array();
 	}
-	
-	public function getAllShops()
+
+    public function getAllShops()
 	{
 		return $this->_qp->query_shops_array();
 	}
