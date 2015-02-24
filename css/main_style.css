@@ -1,0 +1,251 @@
+body{
+	margin:0px;
+	padding:0px;
+	background:#000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#fff;
+}
+
+#layout{
+	width: 100%;
+}
+
+#header{
+	width: 100%;
+	background:#7F7F7F;
+	height: 45px;
+	padding:6px 0px 6px 0px;
+	float: left;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 30px;
+}
+
+#option_nav{
+	width: 100%;
+	float: right;
+	background: #E0EEEE;
+	height: 25px;
+	text-align:right;
+}
+
+#option_nav a {
+	padding:0px 12px 0px 12px;
+	background: #333;
+	color: #fff;
+	font-weight: bold;
+	text-decoration:none;
+	/*padding-right:20px;*/
+	height: 25px;
+	line-height: 25px; /* Vertical link align*/
+	
+	margin: 7px; /* Horizontal separation between links*/
+	
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#option_nav a:hover {
+	background: #666;
+	/*font-style:oblique;*/
+}
+
+#nav{
+	width: 100%;
+	float: left;
+	background: #D1D1D1;
+	height: 35px;
+}
+/*
+#nav ul{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	display: inline;
+}
+
+#nav ul li{
+	float:left;
+	line-height:30px;
+	text-align: center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#fff;
+	background:#53868B;
+}
+
+#nav ul li a{
+	float:left;
+	text-align: center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+	text-decoration:none;
+	padding:0px 30px 0px 30px;
+	vertical-align: center;
+}
+
+#nav ul li a:hover{
+	float:left;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#000000;
+	text-decoration:none;
+	padding:0px 30px 0px 30px;
+	background: #7FFF00;
+} */
+
+/* Estilos del menu*/
+#div_nav{
+	/*width: 50%;	*/
+	margin: 0 auto;
+}
+
+#div_nav a
+{
+	text-decoration:none;
+	line-height: 25px; /* Vertical link align*/
+}
+
+li.potato-menu-item {
+	font-size:12px;
+}
+ul.potato-menu-group {
+	border-top: 1px solid #666;
+	background: #333;
+}
+ul.potato-menu-group a {
+	/*width: 160px;*/
+}
+.potato-menu a {
+	padding:0px 12px 0px 12px;
+	background: #333;
+	color: #fff;
+	font-weight: bold;
+	padding-right:20px;
+	height: 25px;
+	line-height: 25px; /* Vertical link align*/
+	
+	margin: 7px; /* Horizontal separation between links*/
+	
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.potato-menu a:hover {
+	background: #666;
+	/*font-style:oblique;*/
+}
+.potato-menu-has-vertical > a {
+	background: #333 url(../icons/arrow_down.png) right no-repeat;
+}
+.potato-menu-has-holizontal > a {
+	background: #333 url(../icons/arrow_right.png) right no-repeat;
+}
+.potato-menu-has-vertical > a:hover {
+	background: #666 url(../icons/arrow_down.png) right no-repeat;
+}
+.potato-menu-has-holizontal > a:hover {
+	background: #666 url(../icons/arrow_right.png) right no-repeat;
+}
+
+#content{
+	width: 100%;
+	background: #fff;
+	/*background: url(../icons/background.jpg) repeat;*/
+	color: #000000;
+}
+
+#footer{
+	background: #7F7F7F;
+	width: 100%;
+	text-align: center;
+	padding: 0px;
+	font-weight:bold;
+	float: bottom;
+}
+
+/*----------------------------------------------------------*/
+/* Customizing tables except the layout one */
+table:not(#layout){
+	/*border:1px solid blue;*/
+}
+
+th:not(#layout){
+	background: #E0EEEE;
+	color: #104E8B;
+	text-shadow: 1px 1.5px 1px #008B8B;
+	font-size: 1.2em;
+}
+
+.odd {
+   background: #ccc;
+}
+
+.hFormat{
+	color: #6495ED;
+	/*font-weight:bold;*/
+	text-shadow: 1px 1.5px 1px #6495ED;
+}
+
+h2{
+	color: #6495ED;
+	text-shadow: 1px 1.5px 1px #6495ED;
+	font-size: 1.7em;
+	
+	/*color: #fff;
+	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+	font: 50px 'ChunkFiveRegular';*/
+}
+
+h3{
+	color: #6495ED;
+	text-shadow: 1px 1.5px 1px #6495ED;
+	font-size: 1.4em;
+}
+
+.cssUsrInfo
+{
+	color: #6495ED;
+}
+
+.inputDate
+{
+	width:5.3em;
+}
+
+.inputQuantity
+{
+	width:3em;
+}
+
+.inputPrice
+{
+	width:3em;
+	text-align: right;
+}
+
+.warning_text
+{
+	color: red;
+}
+
+.notice_text
+{
+	color: #6495ED;
+}
+
+/*----------------------------------------------------------*/
+.ui-widget {
+    font-family: Gill Sans,Arial,sans-serif;
+    font-size: 12px;
+}
+
+/* IE 6 doesn't support max-height
+ * we use height instead, but this forces the menu to always be this tall
+ */
+* html .ui-autocomplete {
+	height: 100px;
+}

@@ -1,0 +1,36 @@
+<?php
+abstract class PermissionType
+{
+	const PERMISSION = 'permission';
+	const STORE_V = 'store_v';
+	const STORE_A = 'store_a';
+	const STORE_D = 'store_d';
+	const SHOP_V = 'shop_v';
+	const SHOP_A = 'shop_a';
+	const SHOP_D = 'shop_d';
+	const TYRE_A = 'tyre_a';
+	const TYRE_D = 'tyre_d';
+	const SUPPLIER_A = 'supplier_a';
+	const SUPPLIER_D = 'supplier_d';
+	const DEPTOR_A = 'deptor_a';
+	const DEPTOR_D = 'deptor_d';
+	
+	const MOV_V = 'mov_v';
+	const MOV_A = 'mov_a';
+	const MOV_D = 'mov_d';
+	const MOV_O = 'mov_o'; // Outs
+	
+	// Pages
+	const MAIN = 'main';
+	const TYRES = 'tyres';
+	const SUPPLIERS = 'suppliers';
+	const DEPTORS = 'deptors';
+	const ROLES = 'roles';
+	const STORES = 'stores';
+	const STORES_MOVEMENTS = 'stores_movements';
+	const SHOPS = 'shops';
+	const SHOPS_MOVEMENTS = 'shops_movements';
+	const PLACES = 'places';
+	const PERMISSIONS = 'permissions';
+}
+?>
