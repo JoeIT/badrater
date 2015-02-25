@@ -599,7 +599,14 @@ class QueryProcessor
 						supplier_a, 
 						supplier_d, 
 						deptor_a, 
-						deptor_d 
+						deptor_d,
+						kardex_io,
+                        kardex_entries,
+                        kardex_outs,
+                        kardex_stock,
+                        kardex_imports,
+                        kardex_invoices,
+                        kardex_debts
 					FROM '.self::DB_TABLE_ROLE." WHERE user = $userId";
 		
 		if(!($resulSet = $this->_bd->query($query)))
@@ -623,6 +630,13 @@ class QueryProcessor
 												'supplier_d' => $row['supplier_d'],
 												'deptor_a' => $row['deptor_a'],
 												'deptor_d' => $row['deptor_d'],
+                                                'kardex_io' => $row['kardex_io'],
+                                                'kardex_entries' => $row['kardex_entries'],
+                                                'kardex_outs' => $row['kardex_outs'],
+                                                'kardex_stock' => $row['kardex_stock'],
+                                                'kardex_imports' => $row['kardex_imports'],
+                                                'kardex_invoices' => $row['kardex_invoices'],
+                                                'kardex_debts' => $row['kardex_debts']
 												));
 		}
 		
@@ -728,16 +742,27 @@ class QueryProcessor
 										$supplier_a, 
 										$supplier_d, 
 										$deptor_a, 
-										$deptor_d)
+										$deptor_d,
+                                        $kardex_io,
+                                        $kardex_entries,
+                                        $kardex_outs,
+                                        $kardex_stock,
+                                        $kardex_imports,
+                                        $kardex_invoices,
+                                        $kardex_debts)
 	{
 		
 		$query = 'INSERT INTO '.self::DB_TABLE_ROLE." (user, permission, store_v, store_a, store_d, 
 														shop_v, shop_a, shop_d, tyre_a, tyre_d, 
-														supplier_a, supplier_d, deptor_a, deptor_d) 
+														supplier_a, supplier_d, deptor_a, deptor_d,
+														kardex_io, kardex_entries, kardex_outs,
+														kardex_stock, kardex_imports, kardex_invoices, kardex_debts)
 													VALUES 
 													('$user_id', '$permission', '$store_v', '$store_a', '$store_d', '$shop_v', 
 													'$shop_a', '$shop_d', '$tyre_a', '$tyre_d', 
-													'$supplier_a', '$supplier_d', '$deptor_a', '$deptor_d')";
+													'$supplier_a', '$supplier_d', '$deptor_a', '$deptor_d'
+													'$kardex_io', '$kardex_entries', '$kardex_outs', '$kardex_stock', '$kardex_imports',
+													'$kardex_invoices', '$kardex_debts')";
 		
 		return $this->_bd->query($query);
 	}
@@ -798,7 +823,14 @@ class QueryProcessor
 										$supplier_a, 
 										$supplier_d, 
 										$deptor_a, 
-										$deptor_d)
+										$deptor_d,
+                                        $kardex_io,
+                                        $kardex_entries,
+                                        $kardex_outs,
+                                        $kardex_stock,
+                                        $kardex_imports,
+                                        $kardex_invoices,
+                                        $kardex_debts)
 	{
 		
 		if( $store_a == 'y' || $store_d == 'y' )
@@ -818,10 +850,17 @@ class QueryProcessor
 													supplier_a = '$supplier_a', 
 													supplier_d = '$supplier_d', 
 													deptor_a = '$deptor_a', 
-													deptor_d = '$deptor_d' 
+													deptor_d = '$deptor_d',
+													kardex_io = '$kardex_io',
+													kardex_entries = '$kardex_entries',
+													kardex_outs = '$kardex_outs',
+													kardex_stock = '$kardex_stock',
+													kardex_imports = '$kardex_imports',
+													kardex_invoices = '$kardex_invoices',
+													kardex_debts = '$kardex_debts'
 												WHERE user = $user_id";
-		
-		return $this->_bd->query($query);
+
+        return $this->_bd->query($query);
 	}
 	
 	public function query_update_store_role($user_id, $store_id, $mov_v, $mov_a, $mov_d)

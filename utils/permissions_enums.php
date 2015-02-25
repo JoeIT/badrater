@@ -32,5 +32,14 @@ abstract class PermissionType
 	const SHOPS_MOVEMENTS = 'shops_movements';
 	const PLACES = 'places';
 	const PERMISSIONS = 'permissions';
+
+    const KARDEX = 'kardex';
+    const KARDEX_IO = 'kardex_io';
+    const KARDEX_ENTRIES = 'kardex_entries';
+    const KARDEX_OUTS = 'kardex_outs';
+    const KARDEX_STOCK = 'kardex_stock';
+    const KARDEX_IMPORTS = 'kardex_imports';
+    const KARDEX_INVOICE = 'kardex_invoice';
+    const KARDEX_DEBTS = 'kardex_debts';
 }
 ?>

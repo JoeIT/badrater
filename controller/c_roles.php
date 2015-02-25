@@ -56,7 +56,15 @@ class ControllerRoles
 											'x', 
 											'x', 
 											'x', 
-											'x');
+											'x',
+                                            'x',
+											'x',
+											'x',
+											'x',
+											'x',
+											'x',
+											'x'
+        );
 	}
 	
 	public function initiateUserStoresRoles($user_id)
@@ -135,7 +143,14 @@ class ControllerRoles
 								$supplier_a, 
 								$supplier_d, 
 								$deptor_a, 
-								$deptor_d)
+								$deptor_d,
+								$kardex_io,
+                                $kardex_entries,
+                                $kardex_outs,
+                                $kardex_stock,
+                                $kardex_imports,
+                                $kardex_invoices,
+                                $kardex_debts)
 	{
 		return $this->_qp->query_update_role($user_id, 
 											$permission, 
@@ -150,7 +165,14 @@ class ControllerRoles
 											$supplier_a, 
 											$supplier_d, 
 											$deptor_a, 
-											$deptor_d);
+											$deptor_d,
+											$kardex_io,
+											$kardex_entries,
+											$kardex_outs,
+											$kardex_stock,
+											$kardex_imports,
+											$kardex_invoices,
+											$kardex_debts);
 	}
 	
 	public function updateStoreRoles($user_id, $store_id, $mov_v, $mov_a, $mov_d)

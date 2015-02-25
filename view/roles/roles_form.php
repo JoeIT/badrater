@@ -24,7 +24,14 @@ if( isset($_POST['hUserId']) )
 							(isset($_POST['supplier_add'])) ? 'y' : 'x',
 							(isset($_POST['supplier_delete'])) ? 'y' : 'x',
 							(isset($_POST['deptor_add'])) ? 'y' : 'x',
-							(isset($_POST['deptor_delete'])) ? 'y' : 'x' );
+							(isset($_POST['deptor_delete'])) ? 'y' : 'x',
+							(isset($_POST['kardex_io'])) ? 'y' : 'x',
+							(isset($_POST['kardex_entries'])) ? 'y' : 'x',
+							(isset($_POST['kardex_outs'])) ? 'y' : 'x',
+							(isset($_POST['kardex_stock'])) ? 'y' : 'x',
+							(isset($_POST['kardex_imports'])) ? 'y' : 'x',
+							(isset($_POST['kardex_invoices'])) ? 'y' : 'x',
+							(isset($_POST['kardex_debts'])) ? 'y' : 'x');
 	
 	
 	//	Saving store permissions

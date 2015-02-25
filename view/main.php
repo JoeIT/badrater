@@ -184,21 +184,41 @@ if( $access->isPageAllowed(PermissionType::PLACES) )
 						</ul>
 					<?php } ?>
 					</li>
-					<?php } ?>
-					
-					<li><a class='menu_nav' href='javascript:void(0)' url='' >KARDEX</a>
-						<ul>
-							<li><a class='menu_nav' href='javascript:void(0)' url='kardex/io.php' >Entradas y Salidas</a></li>
-							<li><a class='menu_nav' href='javascript:void(0)' url='kardex/entries.php' >Entradas</a></li>
-							<li><a class='menu_nav' href='javascript:void(0)' url='kardex/outs.php' >Salidas</a></li>
-							<li><a class='menu_nav' href='javascript:void(0)' url='kardex/stock.php' >Existencias</a></li>
-							<li><a class='menu_nav' href='javascript:void(0)' url='kardex/invoices.php' >Facturas</a></li>
-							<li><a class='menu_nav' href='javascript:void(0)' url='kardex/imports.php' >Importadores</a></li>
-							<li><a class='menu_nav' href='javascript:void(0)' url='kardex/debts.php' >Deudores</a></li>
-						</ul>
-					</li>
-					
-					<?php
+					<?php }
+                    if( $access->isPageAllowed(PermissionType::KARDEX) ) {
+                        ?>
+                        <li><a class='menu_nav' href='javascript:void(0)' url=''>KARDEX</a>
+                            <ul>
+                                <?php
+                                if( $access->isPageActionAllowed(PermissionType::KARDEX, PermissionType::KARDEX_IO) ) {
+                                ?>
+                                <li><a class='menu_nav' href='javascript:void(0)' url='kardex/io.php'>Entradas y Salidas</a></li>
+                                <?php }
+                                if( $access->isPageActionAllowed(PermissionType::KARDEX, PermissionType::KARDEX_ENTRIES) ) {
+                                ?>
+                                <li><a class='menu_nav' href='javascript:void(0)' url='kardex/entries.php'>Entradas</a></li>
+                                <?php }
+                                if( $access->isPageActionAllowed(PermissionType::KARDEX, PermissionType::KARDEX_OUTS) ) {
+                                ?>
+                                <li><a class='menu_nav' href='javascript:void(0)' url='kardex/outs.php'>Salidas</a></li>
+                                <?php }
+                                if( $access->isPageActionAllowed(PermissionType::KARDEX, PermissionType::KARDEX_STOCK) ) {
+                                ?>
+                                <li><a class='menu_nav' href='javascript:void(0)' url='kardex/stock.php'>Existencias</a></li>
+                                <?php }
+                                if( $access->isPageActionAllowed(PermissionType::KARDEX, PermissionType::KARDEX_IMPORTS) ) {
+                                ?>
+                                <li><a class='menu_nav' href='javascript:void(0)' url='kardex/imports.php'>Importadores</a></li>
+                                <?php }
+                                if( $access->isPageActionAllowed(PermissionType::KARDEX, PermissionType::KARDEX_DEBTS) ) {
+                                ?>
+                                <li><a class='menu_nav' href='javascript:void(0)' url='kardex/debts.php'>Deudores</a></li>
+                                <?php } ?>
+                            </ul>
+                        </li>
+                    <?php
+                    }
+
 					if( $access->isPageAllowed(PermissionType::ROLES) ) {
 					?>
 					<li><a class='menu_nav' href='javascript:void(0)' url='' >OPCIONES</a>
