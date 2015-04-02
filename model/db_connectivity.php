@@ -6,9 +6,9 @@ class DbConnectivity
 	const HOSTNAME = 'localhost';
 	const DB = 'badrater_terrabol';
 	const USER_NAME = 'root';
+	const USER_PASS = '';
 	//const USER_NAME = 'badrater_staler';
 	//const USER_PASS = 'pS,T&y,?Ml($';
-	const USER_PASS = '';
 
 	private static $_instance;
 	private $_db_server = false;

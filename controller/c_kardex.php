@@ -35,9 +35,9 @@ class ControllerKardex
 		return $this->_qp->query_kardex_outs($shop_id, $tyre_id, $type, $dateIni, $dateEnd);
 	}
 	
-	public function stock($tyre_id, $store_id, $shop_id)
+	public function stock($storesArr, $shopsArr, $tyre_id, $store_id, $shop_id)
 	{
-		return $this->_qp->query_kardex_stock($tyre_id, $store_id, $shop_id);
+		return $this->_qp->query_kardex_stock($storesArr, $shopsArr, $tyre_id, $store_id, $shop_id);
 	}
 	
 	public function imports($supplier_id, $dateIni, $dateEnd)

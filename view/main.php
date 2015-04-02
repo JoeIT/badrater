@@ -24,9 +24,9 @@ if( $access->isPageAllowed(PermissionType::PLACES) )
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	
 	<link rel="stylesheet" type="text/css" href="../css/jquery-ui-1.8.24.custom.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/jquery.ui.potato.menu.css">
-	<link rel="stylesheet" type="text/css" href="../css/main_style.css">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery.ui.potato.menu.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/main_style.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
 	
 	
 	<script type="text/javascript" src="../js/jquery-1.8.0.js"></script>
@@ -122,8 +122,9 @@ if( $access->isPageAllowed(PermissionType::PLACES) )
 <table id='layout' border='0'>
 	<tr>
 		<td id='header'>
-			<?php echo $tag_company_name; ?>
-		</td>
+			<img src="<?php echo '../img/'; ?>badra_logo.png" alt="<?php echo $tag_company_name; ?>" height="50px" width="350px">
+
+        </td>
 	</tr>
 	<tr>
 		<td id='option_nav' >

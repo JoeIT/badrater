@@ -1,5 +1,6 @@
 <?php
-session_start();
+if(!isset($_SESSION))
+    session_start();
 
 include('../../controller/c_expenses.php');
 include('../../utils/validators.php');

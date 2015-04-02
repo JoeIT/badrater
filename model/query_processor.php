@@ -760,7 +760,7 @@ class QueryProcessor
 													VALUES 
 													('$user_id', '$permission', '$store_v', '$store_a', '$store_d', '$shop_v', 
 													'$shop_a', '$shop_d', '$tyre_a', '$tyre_d', 
-													'$supplier_a', '$supplier_d', '$deptor_a', '$deptor_d'
+													'$supplier_a', '$supplier_d', '$deptor_a', '$deptor_d',
 													'$kardex_io', '$kardex_entries', '$kardex_outs', '$kardex_stock', '$kardex_imports',
 													'$kardex_invoices', '$kardex_debts')";
 		
@@ -1040,42 +1040,39 @@ class QueryProcessor
 		return $movements_array;
 	}
 	
-	public function query_kardex_stock($tyre_id, $store_id, $shop_id)
+	public function query_kardex_stock($storesArray, $shopsArray, $tyre_id, $store_id, $shop_id)
 	{
 		$where = '';
-        $placesWhere = '';
 
         if( !empty($tyre_id) )
 			$where = " AND s.tyre_id = $tyre_id ";
 		
 		if( !empty($store_id) )
 			$where .= " AND s.store_id = $store_id ";
-        else
+
+        if( !empty($shop_id) )
+            $where .= " AND s.shop_id = $shop_id ";
+
+        if( empty($store_id) && empty($shop_id) )
         {
-            $storesArray = $_SESSION['alowedStores'];
+            $placesWhere = '';
+
             foreach($storesArray as $id => $val)
             {
                 $placesWhere .= " s.store_id = $id OR ";
             }
-        }
-		
-		if( !empty($shop_id) )
-			$where .= " AND s.shop_id = $shop_id ";
-        else
-        {
-            $shopsArray = $_SESSION['alowedShops'];
+
             foreach($shopsArray as $id => $val)
             {
                 $placesWhere .= " s.shop_id = $id OR ";
             }
+
+            if(!empty($placesWhere))
+                $placesWhere = ' AND (' . substr($placesWhere, 0, strlen($placesWhere) - 3) . ') ';
+
+            $where .= $placesWhere;
         }
 
-        if(!empty($placesWhere))
-            $placesWhere = ' AND (' . substr($placesWhere, 0, strlen($placesWhere) - 3) . ') ';
-
-        $where .= $placesWhere;
-
-		
 		$query = 'SELECT quantity, s.tyre_id, tyre_size, tyre_brand, tyre_code, store_id, shop_id FROM '.self::DB_TABLE_STOCK.' as s, 
 															'.self::DB_TABLE_TYRE." as t 
 													WHERE s.tyre_id = t.tyre_id AND s.quantity != 0 

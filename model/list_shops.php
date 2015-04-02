@@ -14,7 +14,8 @@ if(isset($_POST['idShopException']))
 		$shopExcep = " AND shop_id != '" . $_POST['idShopException'] . "' ";
 	else
 	{
-		session_start();
+		if(!isset($_SESSION))
+			session_start();
 		$shopExcep = " AND shop_id != '" . $_SESSION["idShop"] . "' ";		
 	}
 }

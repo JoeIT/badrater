@@ -1,6 +1,7 @@
 <?php
 // This file returns the quantity stock tyre of a store
-session_start();
+if(!isset($_SESSION))
+    session_start();
 include('query_processor.php');
 
 $qp = new QueryProcessor();

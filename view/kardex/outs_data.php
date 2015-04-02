@@ -41,7 +41,7 @@ if( !empty($_POST['tyre_id']) &&
 				<br>
 				TIENDA: $place
 				<br>
-				DEL: ".$config->toExportDateFormat($dateIni)." AL: ".$config->toExportDateFormat($dateEnd);
+				DEL: ".$config->toExportDateFormat($config->toBdDateFormat($dateIni))." AL: ".$config->toExportDateFormat($config->toBdDateFormat($dateEnd));
 
 	$html = 
 	"<table border='0' align='center' width='100%'>

@@ -1,6 +1,9 @@
 <?php 
 include('../../controller/c_kardex.php');
 $control = new ControllerKardex();
+
+if(!isset($_SESSION))
+	session_start();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -134,7 +137,6 @@ $(document).ready(function() {
 				<option value=''>Seleccione</option>
 				<?php
 				$selectHtml = '';
-                session_start();
                 $shopsArray = $_SESSION['alowedShops'];
                 foreach($shopsArray as $id => $val)
                 {

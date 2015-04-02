@@ -1,8 +1,13 @@
+<?php
+if(!isset($_SESSION))
+    session_start();
+?>
+
 <script>
-$(document).ready(function() {
-	
-	$("#kardexStockTable").tablesorter({widthFixed: true, widgets: ['zebra']});
-});
+    $(document).ready(function() {
+
+        $("#kardexStockTable").tablesorter({widthFixed: true, widgets: ['zebra']});
+    });
 </script>
 
 <?php
@@ -33,19 +38,16 @@ $dataTable = '';
 $rowLimiter = '@';
 $colLimiter = '|';
 
+$storesArr = $_SESSION['alowedStores'];
+$shopsArr = $_SESSION['alowedShops'];
+
 if( empty($storeId) && empty($shopId) )
 {
-	//$storesArr = $control->getAllStores();
-	//$shopsArr = $control->getAllShops();
-    session_start();
-	$storesArr = $_SESSION['alowedStores'];
-	$shopsArr = $_SESSION['alowedShops'];
-
 	$cols = 4 + count($storesArr) + count($shopsArr);
 	$widhtPercent = 100 / ($cols + 3);
 
 	// Building the stock array data
-	$dataArr = $control->stock( $tyreId, '', '' );
+	$dataArr = $control->stock($storesArr, $shopsArr, $tyreId, '', '' );
 
 	$total = 0;
 	$totalTyre = 0;
@@ -222,7 +224,7 @@ if( empty($storeId) && empty($shopId) )
 else
 {
 	// Building the stock array data
-	$dataArr = $control->stock( $tyreId, $storeId, $shopId );
+	$dataArr = $control->stock( $storesArr, $shopsArr, $tyreId, $storeId, $shopId );
 	
 	$headerColspan = 4;
 	$header = "$kardexName
