@@ -896,7 +896,7 @@ class QueryProcessor
 	{
         $where = '';
         if( !empty($tyre_id) )
-            $where = " AND tyre_id = $tyre_id ";
+            $where = " AND s.tyre_id = $tyre_id ";
 
         if( !empty($store_id) )
 		{
@@ -969,19 +969,27 @@ class QueryProcessor
 	
 	public function query_kardex_entries($store_id, $shop_id, $tyre_id, $dateIni, $dateEnd)
 	{
-		if( !empty($store_id) )
-			$query = 'SELECT date, supplier.name, employee, amount FROM '.self::DB_TABLE_STORE_E_O.' as eo, 
-													'.self::DB_TABLE_SUPPLIER." as supplier 
-												WHERE store_id = $store_id 
-													AND tyre_id = $tyre_id 
-													AND entry_out = 'entry' 
+        $where = '';
+        if( !empty($tyre_id) )
+            $where = " AND eo.tyre_id = $tyre_id ";
+
+        if( !empty($store_id) )
+			$query = 'SELECT date, supplier.name, employee, amount, tyre.tyre_size, tyre.tyre_brand, tyre.tyre_code
+                    FROM '.self::DB_TABLE_STORE_E_O.' as eo
+                    LEFT JOIN '.self::DB_TABLE_TYRE.' as tyre ON tyre.tyre_id = eo.tyre_id
+                    LEFT JOIN '.self::DB_TABLE_SUPPLIER." as supplier ON supplier.supplier_id = eo.supplier_id
+												WHERE store_id = $store_id
+												    $where
+													AND entry_out = 'entry'
 													AND date >= '$dateIni' 
 													AND date <= '$dateEnd' ";
 		
 		else if( !empty($shop_id) )
-			$query = 'SELECT date, employee AS name, employee, amount FROM '.self::DB_TABLE_SHOP_E_O.' as eo '.
+			$query = 'SELECT date, employee AS name, employee, amount, tyre.tyre_size, tyre.tyre_brand, tyre.tyre_code
+                      FROM '.self::DB_TABLE_SHOP_E_O.' as eo
+                      LEFT JOIN '.self::DB_TABLE_TYRE.' as tyre ON tyre.tyre_id = eo.tyre_id'.
 			                                    "WHERE shop_id = $shop_id
-													AND tyre_id = $tyre_id
+			                                        $where
 													AND entry_out = 'entry'
 													AND date >= '$dateIni'
 													AND date <= '$dateEnd' ";
@@ -992,15 +1000,16 @@ class QueryProcessor
 													AND tyre_id = $tyre_id
 													AND date >= '$dateIni'
 													AND date <= '$dateEnd' ";*/
-		
-		if( !($resulSet = $this->_bd->query($query)) )
+
+        if( !($resulSet = $this->_bd->query($query)) )
 			return array();
 		
 		$movements_array = array();
 		
 		while($row = mysqli_fetch_assoc($resulSet))
 		{
-			array_push($movements_array, array('date' => $row['date'], 
+			array_push($movements_array, array('date' => $row['date'],
+                                                'tyre' => $row['tyre_size'] .' '. $row['tyre_brand'] .' '. $row['tyre_code'],
 												'supplier' => $row['name'], 
 												'employee' => $row['employee'], 
 												'amount' => $row['amount']));

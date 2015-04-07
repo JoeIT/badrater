@@ -10,8 +10,7 @@ $(document).ready(function() {
 include('../../controller/c_kardex.php');
 include('../../utils/config.php');
 
-if( !empty($_POST['tyre_id']) && 
-	!empty($_POST['tyre_name']) &&
+if( !empty($_POST['tyre_name']) &&
 	!empty($_POST['dateIni']) &&
 	!empty($_POST['dateEnd']) &&
 	!empty($_POST['place_code']) &&

@@ -14,7 +14,7 @@ if(!isset($_SESSION))
 $(document).ready(function() {
 	$('#bGenerate').click(function(){
 		
-		if( $('#kardex_entries_tyre_id').val() == '' )
+		if( $('#kardex_entries_tyre_id').val() == '' && !($('#kardex_entries_all_tyres').is(':checked')) )
 			alert( 'Seleccione una llanta.' );
 		else if( $('#kardex_entries_date_ini').val() == '' )
 			alert( 'Seleccione fecha inicial.' );
@@ -35,6 +35,25 @@ $(document).ready(function() {
 			});
 		}
 	});
+
+    $('#kardex_entries_all_tyres').change(function(){
+        if( $(this).is(':checked') )
+        {
+            $('#kardex_entries_tyre').prop('disabled', true);
+            $('#kardex_entries_tyre_type_search').prop('disabled', true);
+            $('#bDelete_tyre_entries').hide();
+            $('#kardex_entries_tyre').val('Todas las llantas');
+            $('#kardex_entries_tyre_id').val('');
+
+        }
+        else
+        {
+            $('#kardex_entries_tyre').val('');
+            $('#kardex_entries_tyre_type_search').prop('disabled', false);
+            $('#kardex_entries_tyre').prop('disabled', false);
+            $('#bDelete_tyre_entries').show();
+        }
+    });
 	
 	// Autocomplete tyre
 	$("#kardex_entries_tyre").autocomplete({
@@ -107,6 +126,8 @@ $(document).ready(function() {
 	<tr>
 		<th>Llanta:</th>
 		<td align='center'>
+            TODAS >>> <input type='checkbox' id='kardex_entries_all_tyres'><br>
+            <br>
 			<input type='text' id='kardex_entries_tyre' style='width:85%'>
 			<a href='javascript:void(0)' title='Borrar llanta' id='bDelete_tyre_entries' ><img src='../icons/delete.png'></a>
 			<input type='hidden' id='kardex_entries_tyre_id'>

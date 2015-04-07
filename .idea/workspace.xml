@@ -35,79 +35,148 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="query_processor.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="query_processor.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/query_processor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.846153" vertical-offset="18364" max-vertical-offset="21199">
-              <caret line="1106" column="76" selection-start-line="1106" selection-start-column="76" selection-end-line="1106" selection-end-column="76" />
+            <state vertical-scroll-proportion="0.42549923" vertical-offset="16502" max-vertical-offset="21352">
+              <caret line="987" column="51" selection-start-line="987" selection-start-column="47" selection-end-line="987" selection-end-column="51" />
               <folding>
-                <marker date="1428212920237" expanded="true" signature="1249:1264" placeholder="SELECT id FR..self_DB_TABLE_DEBT..." />
-                <marker date="1428212920237" expanded="true" signature="1863:1878" placeholder="SELECT id FR..self_DB_TABLE_DEPTOR..." />
-                <marker date="1428212920237" expanded="true" signature="2489:2504" placeholder="SELECT id FR..self_DB_TABLE_EXPENSE..." />
-                <marker date="1428212920237" expanded="true" signature="3120:3143" placeholder="SELECT invoi..self_DB_TABLE_INVOICE..." />
-                <marker date="1428212920237" expanded="true" signature="3725:3745" placeholder="SELECT shop_..self_DB_TABLE_SHOP..." />
-                <marker date="1428212920237" expanded="true" signature="4726:5076" placeholder="SELECT date,..." />
-                <marker date="1428212920237" expanded="true" signature="6001:6016" placeholder="SELECT id FR..self_DB_TABLE_SHOP_E_O..." />
-                <marker date="1428212920237" expanded="true" signature="6591:6606" placeholder="SELECT id FR..self_DB_TABLE_SHOP_E_O..." />
-                <marker date="1428212920237" expanded="true" signature="7090:7151" placeholder="SELECT * FRO..self_DB_TABLE_STORE..." />
-                <marker date="1428212920237" expanded="true" signature="7690:7762" placeholder="SELECT quant..self_DB_TABLE_STOCK..." />
-                <marker date="1428212920237" expanded="true" signature="8257:8314" placeholder="SELECT tyre_..self_DB_TABLE_STOCK..." />
-                <marker date="1428212920237" expanded="true" signature="8880:8952" placeholder="SELECT quant..self_DB_TABLE_STOCK..." />
-                <marker date="1428212920237" expanded="true" signature="9267:9371" placeholder="INSERT INTO ..." />
-                <marker date="1428212920237" expanded="true" signature="9416:9518" placeholder="INSERT INTO ..." />
-                <marker date="1428212920237" expanded="true" signature="9751:9805" placeholder="DELETE FROM ..." />
-                <marker date="1428212920237" expanded="true" signature="9926:9979" placeholder="DELETE FROM ..." />
-                <marker date="1428212920237" expanded="true" signature="10217:10238" placeholder="SELECT store..self_DB_TABLE_STORE..." />
-                <marker date="1428212920237" expanded="true" signature="10797:10812" placeholder="SELECT id FR..self_DB_TABLE_STORE_E_O..." />
-                <marker date="1428212920237" expanded="true" signature="11400:11424" placeholder="SELECT suppl..self_DB_TABLE_SUPPLIER..." />
-                <marker date="1428212920237" expanded="true" signature="11991:12011" placeholder="SELECT tyre_..self_DB_TABLE_TYRE..." />
-                <marker date="1428212920237" expanded="true" signature="12622:12637" placeholder="SELECT id FR..self_DB_TABLE_USR..." />
-                <marker date="1428212920237" expanded="true" signature="13162:13183" placeholder="SELECT id, n..self_DB_TABLE_USR..." />
-                <marker date="1428212920237" expanded="true" signature="13643:13665" placeholder="SELECT id, l..self_DB_TABLE_USR..." />
-                <marker date="1428212920237" expanded="true" signature="14133:14655" placeholder="SELECT id, p..self_DB_TABLE_ROLE..." />
-                <marker date="1428212920237" expanded="true" signature="16340:16445" placeholder="SELECT store..self_DB_TABLE_STORE..." />
-                <marker date="1428212920237" expanded="true" signature="16976:17062" placeholder="SELECT shop_..self_DB_TABLE_SHOP..." />
-                <marker date="1428212920237" expanded="true" signature="17415:17525" placeholder="SELECT store..self_DB_TABLE_ROLE_STORE..." />
-                <marker date="1428212920237" expanded="true" signature="17956:18070" placeholder="SELECT shop_..self_DB_TABLE_ROLE_SHOP..." />
-                <marker date="1428212920237" expanded="true" signature="19199:19908" placeholder="INSERT INTO ..." />
-                <marker date="1428212920237" expanded="true" signature="20054:20209" placeholder="INSERT INTO ..." />
-                <marker date="1428212920237" expanded="true" signature="20356:20508" placeholder="INSERT INTO ..." />
-                <marker date="1428212920237" expanded="true" signature="20627:20676" placeholder="DELETE FROM ..." />
-                <marker date="1428212920237" expanded="true" signature="20702:20757" placeholder="DELETE FROM ..." />
-                <marker date="1428212920237" expanded="true" signature="20783:20837" placeholder="DELETE FROM ..." />
-                <marker date="1428212920237" expanded="true" signature="21094:21153" placeholder="DELETE FROM ..." />
-                <marker date="1428212920237" expanded="true" signature="21278:21335" placeholder="DELETE FROM ..." />
-                <marker date="1428212920237" expanded="true" signature="24286:24692" placeholder="SELECT date,..." />
-                <marker date="1428212920237" expanded="true" signature="24747:25150" placeholder="SELECT date,..." />
-                <marker date="1428212920237" expanded="true" signature="26624:26952" placeholder="SELECT date,..." />
-                <marker date="1428212920237" expanded="true" signature="27002:27301" placeholder="SELECT date,..." />
-                <marker date="1428212920237" expanded="true" signature="28233:28588" placeholder="SELECT date,..." />
-                <marker date="1428212920237" expanded="true" signature="29895:30195" placeholder="SELECT quant..self_DB_TABLE_STOCK..." />
-                <marker date="1428212920237" expanded="true" signature="30811:31219" placeholder="SELECT store..self_DB_TABLE_STORE..." />
-                <marker date="1428212920237" expanded="true" signature="31734:32388" placeholder="SELECT store..self_DB_TABLE_STORE..." />
-                <marker date="1428212920237" expanded="true" signature="33305:33777" placeholder="SELECT date,..." />
-                <marker date="1428212920237" expanded="true" signature="33814:34145" placeholder="SELECT date,..." />
+                <marker date="1428386557826" expanded="true" signature="1249:1264" placeholder="SELECT id FR..self_DB_TABLE_DEBT..." />
+                <marker date="1428386557826" expanded="true" signature="1863:1878" placeholder="SELECT id FR..self_DB_TABLE_DEPTOR..." />
+                <marker date="1428386557826" expanded="true" signature="2489:2504" placeholder="SELECT id FR..self_DB_TABLE_EXPENSE..." />
+                <marker date="1428386557826" expanded="true" signature="3120:3143" placeholder="SELECT invoi..self_DB_TABLE_INVOICE..." />
+                <marker date="1428386557826" expanded="true" signature="3725:3745" placeholder="SELECT shop_..self_DB_TABLE_SHOP..." />
+                <marker date="1428386557826" expanded="true" signature="4726:5076" placeholder="SELECT date,..." />
+                <marker date="1428386557826" expanded="true" signature="6001:6016" placeholder="SELECT id FR..self_DB_TABLE_SHOP_E_O..." />
+                <marker date="1428386557826" expanded="true" signature="6591:6606" placeholder="SELECT id FR..self_DB_TABLE_SHOP_E_O..." />
+                <marker date="1428386557826" expanded="true" signature="7090:7151" placeholder="SELECT * FRO..self_DB_TABLE_STORE..." />
+                <marker date="1428386557826" expanded="true" signature="7690:7762" placeholder="SELECT quant..self_DB_TABLE_STOCK..." />
+                <marker date="1428386557826" expanded="true" signature="8257:8314" placeholder="SELECT tyre_..self_DB_TABLE_STOCK..." />
+                <marker date="1428386557826" expanded="true" signature="8880:8952" placeholder="SELECT quant..self_DB_TABLE_STOCK..." />
+                <marker date="1428386557826" expanded="true" signature="9267:9371" placeholder="INSERT INTO ..." />
+                <marker date="1428386557826" expanded="true" signature="9416:9518" placeholder="INSERT INTO ..." />
+                <marker date="1428386557826" expanded="true" signature="9751:9805" placeholder="DELETE FROM ..." />
+                <marker date="1428386557826" expanded="true" signature="9926:9979" placeholder="DELETE FROM ..." />
+                <marker date="1428386557826" expanded="true" signature="10217:10238" placeholder="SELECT store..self_DB_TABLE_STORE..." />
+                <marker date="1428386557826" expanded="true" signature="10797:10812" placeholder="SELECT id FR..self_DB_TABLE_STORE_E_O..." />
+                <marker date="1428386557826" expanded="true" signature="11400:11424" placeholder="SELECT suppl..self_DB_TABLE_SUPPLIER..." />
+                <marker date="1428386557826" expanded="true" signature="11991:12011" placeholder="SELECT tyre_..self_DB_TABLE_TYRE..." />
+                <marker date="1428386557826" expanded="true" signature="12622:12637" placeholder="SELECT id FR..self_DB_TABLE_USR..." />
+                <marker date="1428386557826" expanded="true" signature="13162:13183" placeholder="SELECT id, n..self_DB_TABLE_USR..." />
+                <marker date="1428386557826" expanded="true" signature="13643:13665" placeholder="SELECT id, l..self_DB_TABLE_USR..." />
+                <marker date="1428386557826" expanded="true" signature="14133:14655" placeholder="SELECT id, p..self_DB_TABLE_ROLE..." />
+                <marker date="1428386557826" expanded="true" signature="16340:16445" placeholder="SELECT store..self_DB_TABLE_STORE..." />
+                <marker date="1428386557826" expanded="true" signature="16976:17062" placeholder="SELECT shop_..self_DB_TABLE_SHOP..." />
+                <marker date="1428386557826" expanded="true" signature="17415:17525" placeholder="SELECT store..self_DB_TABLE_ROLE_STORE..." />
+                <marker date="1428386557826" expanded="true" signature="17956:18070" placeholder="SELECT shop_..self_DB_TABLE_ROLE_SHOP..." />
+                <marker date="1428386557826" expanded="true" signature="19199:19908" placeholder="INSERT INTO ..." />
+                <marker date="1428386557826" expanded="true" signature="20054:20209" placeholder="INSERT INTO ..." />
+                <marker date="1428386557826" expanded="true" signature="20356:20508" placeholder="INSERT INTO ..." />
+                <marker date="1428386557826" expanded="true" signature="20627:20676" placeholder="DELETE FROM ..." />
+                <marker date="1428386557826" expanded="true" signature="20702:20757" placeholder="DELETE FROM ..." />
+                <marker date="1428386557826" expanded="true" signature="20783:20837" placeholder="DELETE FROM ..." />
+                <marker date="1428386557826" expanded="true" signature="21094:21153" placeholder="DELETE FROM ..." />
+                <marker date="1428386557826" expanded="true" signature="21278:21335" placeholder="DELETE FROM ..." />
+                <marker date="1428386557826" expanded="true" signature="24288:24694" placeholder="SELECT date,..." />
+                <marker date="1428386557826" expanded="true" signature="24749:25152" placeholder="SELECT date,..." />
+                <marker date="1428386557826" expanded="true" signature="26737:26920" placeholder="SELECT date,..." />
+                <marker date="1428386557826" expanded="true" signature="26737:26921" placeholder="SELECT date,..." />
+                <marker date="1428386557826" expanded="true" signature="26737:27038" placeholder="SELECT date,..." />
+                <marker date="1428386557826" expanded="true" signature="26737:27264" placeholder="SELECT date,..." />
+                <marker date="1428386557826" expanded="true" signature="27314:27503" placeholder="SELECT date,..." />
+                <marker date="1428386557826" expanded="true" signature="27314:27566" placeholder="SELECT date,..." />
+                <marker date="1428386557826" expanded="true" signature="27314:27790" placeholder="SELECT date,..." />
+                <marker date="1428386557826" expanded="true" signature="28851:29206" placeholder="SELECT date,..." />
+                <marker date="1428386557826" expanded="true" signature="30513:30813" placeholder="SELECT quant..self_DB_TABLE_STOCK..." />
+                <marker date="1428386557826" expanded="true" signature="31429:31837" placeholder="SELECT store..self_DB_TABLE_STORE..." />
+                <marker date="1428386557826" expanded="true" signature="32352:33006" placeholder="SELECT store..self_DB_TABLE_STORE..." />
+                <marker date="1428386557826" expanded="true" signature="33923:34395" placeholder="SELECT date,..." />
+                <marker date="1428386557826" expanded="true" signature="34432:34763" placeholder="SELECT date,..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="c_shops.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/c_shops.php">
+      <file leaf-file-name="io.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/kardex/io.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.730769" vertical-offset="1285" max-vertical-offset="11356">
-              <caret line="92" column="70" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="70" />
+            <state vertical-scroll-proportion="1.962963" vertical-offset="395" max-vertical-offset="3485">
+              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="94" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sales.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/shops/sales.php">
+      <file leaf-file-name="io_data.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/kardex/io_data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2549923" vertical-offset="3387" max-vertical-offset="4930">
-              <caret line="209" column="20" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
+            <state vertical-scroll-proportion="-7.796296" vertical-offset="1942" max-vertical-offset="2856">
+              <caret line="139" column="34" selection-start-line="139" selection-start-column="25" selection-end-line="139" selection-end-column="34" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="entries.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/kardex/entries.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.961538" vertical-offset="290" max-vertical-offset="3349">
+              <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="entries_data.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/kardex/entries_data.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.962963" vertical-offset="1491" max-vertical-offset="2210">
+              <caret line="113" column="34" selection-start-line="113" selection-start-column="34" selection-end-line="113" selection-end-column="34" />
+              <folding>
+                <marker date="1428385082900" expanded="true" signature="1044:1124" placeholder="..." />
+                <marker date="1428385082900" expanded="true" signature="1051:1114" placeholder="..." />
+                <marker date="1428385082900" expanded="true" signature="1084:1106" placeholder="..." />
+                <marker date="1428385082900" expanded="true" signature="1216:1475" placeholder="..." />
+                <marker date="1428385082900" expanded="true" signature="1227:1465" placeholder="..." />
+                <marker date="1428385082900" expanded="true" signature="1234:1264" placeholder="..." />
+                <marker date="1428385082900" expanded="true" signature="1234:1304" placeholder="..." />
+                <marker date="1428385082900" expanded="true" signature="1234:1454" placeholder="..." />
+                <marker date="1428385082900" expanded="true" signature="1957:1994" placeholder="..." />
+                <marker date="1428385082900" expanded="true" signature="1957:2014" placeholder="..." />
+                <marker date="1428385082900" expanded="true" signature="1957:2059" placeholder="..." />
+                <marker date="1428385082900" expanded="true" signature="1957:2215" placeholder="..." />
+                <marker date="1428385082900" expanded="true" signature="2566:2582" placeholder="..." />
+                <marker date="1428385082900" expanded="true" signature="2566:2646" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="outs.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/kardex/outs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="3.3076923" vertical-offset="358" max-vertical-offset="3434">
+              <caret line="16" column="98" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="outs_data.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/kardex/outs_data.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="23.538462" vertical-offset="816" max-vertical-offset="1904">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+              <folding>
+                <marker date="1428384170247" expanded="true" signature="1127:1207" placeholder="..." />
+                <marker date="1428384170247" expanded="true" signature="1134:1197" placeholder="..." />
+                <marker date="1428384170247" expanded="true" signature="1167:1189" placeholder="..." />
+                <marker date="1428384170247" expanded="true" signature="1296:1471" placeholder="..." />
+                <marker date="1428384170247" expanded="true" signature="1307:1464" placeholder="..." />
+                <marker date="1428384170247" expanded="true" signature="1314:1453" placeholder="..." />
+                <marker date="1428384170247" expanded="true" signature="1861:2026" placeholder="..." />
+                <marker date="1428384170247" expanded="true" signature="2310:2382" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,8 +196,6 @@
         <option value="$PROJECT_DIR$/controller/c_shops.php" />
         <option value="$PROJECT_DIR$/view/shops/shop_eo.php" />
         <option value="$PROJECT_DIR$/view/kardex/io.php" />
-        <option value="$PROJECT_DIR$/view/kardex/entries.php" />
-        <option value="$PROJECT_DIR$/view/kardex/outs.php" />
         <option value="$PROJECT_DIR$/controller/c_roles.php" />
         <option value="$PROJECT_DIR$/view/roles/roles_config.php" />
         <option value="$PROJECT_DIR$/view/roles/roles_form.php" />
@@ -140,10 +207,13 @@
         <option value="$PROJECT_DIR$/view/main.php" />
         <option value="$PROJECT_DIR$/view/kardex/io_data.php" />
         <option value="$PROJECT_DIR$/view/kardex/imports_data.php" />
-        <option value="$PROJECT_DIR$/view/kardex/outs_data.php" />
-        <option value="$PROJECT_DIR$/model/query_processor.php" />
         <option value="$PROJECT_DIR$/utils/permissions_enums.php" />
         <option value="$PROJECT_DIR$/view/shops/sales.php" />
+        <option value="$PROJECT_DIR$/view/kardex/outs.php" />
+        <option value="$PROJECT_DIR$/view/kardex/entries.php" />
+        <option value="$PROJECT_DIR$/view/kardex/outs_data.php" />
+        <option value="$PROJECT_DIR$/view/kardex/entries_data.php" />
+        <option value="$PROJECT_DIR$/model/query_processor.php" />
       </list>
     </option>
   </component>
@@ -226,57 +296,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shops" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="badrater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="badrater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="roles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="badrater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="badrater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="debts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="badrater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="badrater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
+              <option name="myItemId" value="kardex" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -499,20 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/kardex/outs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42415318" vertical-offset="2041" max-vertical-offset="3043">
-          <caret line="137" column="54" selection-start-line="137" selection-start-column="30" selection-end-line="137" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/kardex/entries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538" vertical-offset="2040" max-vertical-offset="2958">
-          <caret line="136" column="28" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/access_query.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46676302" vertical-offset="0" max-vertical-offset="748">
@@ -556,13 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/kardex/entries_data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2023">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/kardex/imports_data.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3755523" vertical-offset="357" max-vertical-offset="1785">
@@ -577,24 +576,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/kardex/outs_data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25036818" vertical-offset="561" max-vertical-offset="1921">
-          <caret line="43" column="75" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/kardex/stock_data.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.5110455" vertical-offset="4421" max-vertical-offset="5100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/kardex/io.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.086892486" vertical-offset="2576" max-vertical-offset="3485">
-          <caret line="155" column="27" selection-start-line="155" selection-start-column="27" selection-end-line="155" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -686,86 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/kardex/io_data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="2856">
-          <caret line="90" column="12" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="12" />
-          <folding>
-            <marker date="1427781876685" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427781876685" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427781876685" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427781876685" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427781876685" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427781876685" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427781876685" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427781876685" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/c_kardex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1088">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/query_processor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.846153" vertical-offset="18364" max-vertical-offset="21199">
-          <caret line="1106" column="76" selection-start-line="1106" selection-start-column="76" selection-end-line="1106" selection-end-column="76" />
-          <folding>
-            <marker date="1428212920237" expanded="true" signature="1249:1264" placeholder="SELECT id FR..self_DB_TABLE_DEBT..." />
-            <marker date="1428212920237" expanded="true" signature="1863:1878" placeholder="SELECT id FR..self_DB_TABLE_DEPTOR..." />
-            <marker date="1428212920237" expanded="true" signature="2489:2504" placeholder="SELECT id FR..self_DB_TABLE_EXPENSE..." />
-            <marker date="1428212920237" expanded="true" signature="3120:3143" placeholder="SELECT invoi..self_DB_TABLE_INVOICE..." />
-            <marker date="1428212920237" expanded="true" signature="3725:3745" placeholder="SELECT shop_..self_DB_TABLE_SHOP..." />
-            <marker date="1428212920237" expanded="true" signature="4726:5076" placeholder="SELECT date,..." />
-            <marker date="1428212920237" expanded="true" signature="6001:6016" placeholder="SELECT id FR..self_DB_TABLE_SHOP_E_O..." />
-            <marker date="1428212920237" expanded="true" signature="6591:6606" placeholder="SELECT id FR..self_DB_TABLE_SHOP_E_O..." />
-            <marker date="1428212920237" expanded="true" signature="7090:7151" placeholder="SELECT * FRO..self_DB_TABLE_STORE..." />
-            <marker date="1428212920237" expanded="true" signature="7690:7762" placeholder="SELECT quant..self_DB_TABLE_STOCK..." />
-            <marker date="1428212920237" expanded="true" signature="8257:8314" placeholder="SELECT tyre_..self_DB_TABLE_STOCK..." />
-            <marker date="1428212920237" expanded="true" signature="8880:8952" placeholder="SELECT quant..self_DB_TABLE_STOCK..." />
-            <marker date="1428212920237" expanded="true" signature="9267:9371" placeholder="INSERT INTO ..." />
-            <marker date="1428212920237" expanded="true" signature="9416:9518" placeholder="INSERT INTO ..." />
-            <marker date="1428212920237" expanded="true" signature="9751:9805" placeholder="DELETE FROM ..." />
-            <marker date="1428212920237" expanded="true" signature="9926:9979" placeholder="DELETE FROM ..." />
-            <marker date="1428212920237" expanded="true" signature="10217:10238" placeholder="SELECT store..self_DB_TABLE_STORE..." />
-            <marker date="1428212920237" expanded="true" signature="10797:10812" placeholder="SELECT id FR..self_DB_TABLE_STORE_E_O..." />
-            <marker date="1428212920237" expanded="true" signature="11400:11424" placeholder="SELECT suppl..self_DB_TABLE_SUPPLIER..." />
-            <marker date="1428212920237" expanded="true" signature="11991:12011" placeholder="SELECT tyre_..self_DB_TABLE_TYRE..." />
-            <marker date="1428212920237" expanded="true" signature="12622:12637" placeholder="SELECT id FR..self_DB_TABLE_USR..." />
-            <marker date="1428212920237" expanded="true" signature="13162:13183" placeholder="SELECT id, n..self_DB_TABLE_USR..." />
-            <marker date="1428212920237" expanded="true" signature="13643:13665" placeholder="SELECT id, l..self_DB_TABLE_USR..." />
-            <marker date="1428212920237" expanded="true" signature="14133:14655" placeholder="SELECT id, p..self_DB_TABLE_ROLE..." />
-            <marker date="1428212920237" expanded="true" signature="16340:16445" placeholder="SELECT store..self_DB_TABLE_STORE..." />
-            <marker date="1428212920237" expanded="true" signature="16976:17062" placeholder="SELECT shop_..self_DB_TABLE_SHOP..." />
-            <marker date="1428212920237" expanded="true" signature="17415:17525" placeholder="SELECT store..self_DB_TABLE_ROLE_STORE..." />
-            <marker date="1428212920237" expanded="true" signature="17956:18070" placeholder="SELECT shop_..self_DB_TABLE_ROLE_SHOP..." />
-            <marker date="1428212920237" expanded="true" signature="19199:19908" placeholder="INSERT INTO ..." />
-            <marker date="1428212920237" expanded="true" signature="20054:20209" placeholder="INSERT INTO ..." />
-            <marker date="1428212920237" expanded="true" signature="20356:20508" placeholder="INSERT INTO ..." />
-            <marker date="1428212920237" expanded="true" signature="20627:20676" placeholder="DELETE FROM ..." />
-            <marker date="1428212920237" expanded="true" signature="20702:20757" placeholder="DELETE FROM ..." />
-            <marker date="1428212920237" expanded="true" signature="20783:20837" placeholder="DELETE FROM ..." />
-            <marker date="1428212920237" expanded="true" signature="21094:21153" placeholder="DELETE FROM ..." />
-            <marker date="1428212920237" expanded="true" signature="21278:21335" placeholder="DELETE FROM ..." />
-            <marker date="1428212920237" expanded="true" signature="24286:24692" placeholder="SELECT date,..." />
-            <marker date="1428212920237" expanded="true" signature="24747:25150" placeholder="SELECT date,..." />
-            <marker date="1428212920237" expanded="true" signature="26624:26952" placeholder="SELECT date,..." />
-            <marker date="1428212920237" expanded="true" signature="27002:27301" placeholder="SELECT date,..." />
-            <marker date="1428212920237" expanded="true" signature="28233:28588" placeholder="SELECT date,..." />
-            <marker date="1428212920237" expanded="true" signature="29895:30195" placeholder="SELECT quant..self_DB_TABLE_STOCK..." />
-            <marker date="1428212920237" expanded="true" signature="30811:31219" placeholder="SELECT store..self_DB_TABLE_STORE..." />
-            <marker date="1428212920237" expanded="true" signature="31734:32388" placeholder="SELECT store..self_DB_TABLE_STORE..." />
-            <marker date="1428212920237" expanded="true" signature="33305:33777" placeholder="SELECT date,..." />
-            <marker date="1428212920237" expanded="true" signature="33814:34145" placeholder="SELECT date,..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/generic_tags.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="718">
@@ -786,14 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="718">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/c_shops.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.730769" vertical-offset="1285" max-vertical-offset="11356">
-          <caret line="92" column="70" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -824,9 +721,157 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/shops/sales.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2549923" vertical-offset="3387" max-vertical-offset="4930">
-          <caret line="209" column="20" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.281106" vertical-offset="3387" max-vertical-offset="4930">
+          <caret line="210" column="25" selection-start-line="210" selection-start-column="25" selection-end-line="210" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/c_shops.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4108984" vertical-offset="1285" max-vertical-offset="11356">
+          <caret line="92" column="70" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/c_kardex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2947977" vertical-offset="204" max-vertical-offset="1088">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/kardex/entries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.961538" vertical-offset="290" max-vertical-offset="3349">
+          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/kardex/outs_data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="23.538462" vertical-offset="816" max-vertical-offset="1904">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <marker date="1428384170247" expanded="true" signature="1127:1207" placeholder="..." />
+            <marker date="1428384170247" expanded="true" signature="1134:1197" placeholder="..." />
+            <marker date="1428384170247" expanded="true" signature="1167:1189" placeholder="..." />
+            <marker date="1428384170247" expanded="true" signature="1296:1471" placeholder="..." />
+            <marker date="1428384170247" expanded="true" signature="1307:1464" placeholder="..." />
+            <marker date="1428384170247" expanded="true" signature="1314:1453" placeholder="..." />
+            <marker date="1428384170247" expanded="true" signature="1861:2026" placeholder="..." />
+            <marker date="1428384170247" expanded="true" signature="2310:2382" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/kardex/outs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.3076923" vertical-offset="358" max-vertical-offset="3434">
+          <caret line="16" column="98" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/kardex/io_data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.796296" vertical-offset="1942" max-vertical-offset="2856">
+          <caret line="139" column="34" selection-start-line="139" selection-start-column="25" selection-end-line="139" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/kardex/entries_data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.962963" vertical-offset="1491" max-vertical-offset="2210">
+          <caret line="113" column="34" selection-start-line="113" selection-start-column="34" selection-end-line="113" selection-end-column="34" />
+          <folding>
+            <marker date="1428385082900" expanded="true" signature="1044:1124" placeholder="..." />
+            <marker date="1428385082900" expanded="true" signature="1051:1114" placeholder="..." />
+            <marker date="1428385082900" expanded="true" signature="1084:1106" placeholder="..." />
+            <marker date="1428385082900" expanded="true" signature="1216:1475" placeholder="..." />
+            <marker date="1428385082900" expanded="true" signature="1227:1465" placeholder="..." />
+            <marker date="1428385082900" expanded="true" signature="1234:1264" placeholder="..." />
+            <marker date="1428385082900" expanded="true" signature="1234:1304" placeholder="..." />
+            <marker date="1428385082900" expanded="true" signature="1234:1454" placeholder="..." />
+            <marker date="1428385082900" expanded="true" signature="1957:1994" placeholder="..." />
+            <marker date="1428385082900" expanded="true" signature="1957:2014" placeholder="..." />
+            <marker date="1428385082900" expanded="true" signature="1957:2059" placeholder="..." />
+            <marker date="1428385082900" expanded="true" signature="1957:2215" placeholder="..." />
+            <marker date="1428385082900" expanded="true" signature="2566:2582" placeholder="..." />
+            <marker date="1428385082900" expanded="true" signature="2566:2646" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/kardex/io.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.962963" vertical-offset="395" max-vertical-offset="3485">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/query_processor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42549923" vertical-offset="16502" max-vertical-offset="21352">
+          <caret line="987" column="51" selection-start-line="987" selection-start-column="47" selection-end-line="987" selection-end-column="51" />
+          <folding>
+            <marker date="1428386557826" expanded="true" signature="1249:1264" placeholder="SELECT id FR..self_DB_TABLE_DEBT..." />
+            <marker date="1428386557826" expanded="true" signature="1863:1878" placeholder="SELECT id FR..self_DB_TABLE_DEPTOR..." />
+            <marker date="1428386557826" expanded="true" signature="2489:2504" placeholder="SELECT id FR..self_DB_TABLE_EXPENSE..." />
+            <marker date="1428386557826" expanded="true" signature="3120:3143" placeholder="SELECT invoi..self_DB_TABLE_INVOICE..." />
+            <marker date="1428386557826" expanded="true" signature="3725:3745" placeholder="SELECT shop_..self_DB_TABLE_SHOP..." />
+            <marker date="1428386557826" expanded="true" signature="4726:5076" placeholder="SELECT date,..." />
+            <marker date="1428386557826" expanded="true" signature="6001:6016" placeholder="SELECT id FR..self_DB_TABLE_SHOP_E_O..." />
+            <marker date="1428386557826" expanded="true" signature="6591:6606" placeholder="SELECT id FR..self_DB_TABLE_SHOP_E_O..." />
+            <marker date="1428386557826" expanded="true" signature="7090:7151" placeholder="SELECT * FRO..self_DB_TABLE_STORE..." />
+            <marker date="1428386557826" expanded="true" signature="7690:7762" placeholder="SELECT quant..self_DB_TABLE_STOCK..." />
+            <marker date="1428386557826" expanded="true" signature="8257:8314" placeholder="SELECT tyre_..self_DB_TABLE_STOCK..." />
+            <marker date="1428386557826" expanded="true" signature="8880:8952" placeholder="SELECT quant..self_DB_TABLE_STOCK..." />
+            <marker date="1428386557826" expanded="true" signature="9267:9371" placeholder="INSERT INTO ..." />
+            <marker date="1428386557826" expanded="true" signature="9416:9518" placeholder="INSERT INTO ..." />
+            <marker date="1428386557826" expanded="true" signature="9751:9805" placeholder="DELETE FROM ..." />
+            <marker date="1428386557826" expanded="true" signature="9926:9979" placeholder="DELETE FROM ..." />
+            <marker date="1428386557826" expanded="true" signature="10217:10238" placeholder="SELECT store..self_DB_TABLE_STORE..." />
+            <marker date="1428386557826" expanded="true" signature="10797:10812" placeholder="SELECT id FR..self_DB_TABLE_STORE_E_O..." />
+            <marker date="1428386557826" expanded="true" signature="11400:11424" placeholder="SELECT suppl..self_DB_TABLE_SUPPLIER..." />
+            <marker date="1428386557826" expanded="true" signature="11991:12011" placeholder="SELECT tyre_..self_DB_TABLE_TYRE..." />
+            <marker date="1428386557826" expanded="true" signature="12622:12637" placeholder="SELECT id FR..self_DB_TABLE_USR..." />
+            <marker date="1428386557826" expanded="true" signature="13162:13183" placeholder="SELECT id, n..self_DB_TABLE_USR..." />
+            <marker date="1428386557826" expanded="true" signature="13643:13665" placeholder="SELECT id, l..self_DB_TABLE_USR..." />
+            <marker date="1428386557826" expanded="true" signature="14133:14655" placeholder="SELECT id, p..self_DB_TABLE_ROLE..." />
+            <marker date="1428386557826" expanded="true" signature="16340:16445" placeholder="SELECT store..self_DB_TABLE_STORE..." />
+            <marker date="1428386557826" expanded="true" signature="16976:17062" placeholder="SELECT shop_..self_DB_TABLE_SHOP..." />
+            <marker date="1428386557826" expanded="true" signature="17415:17525" placeholder="SELECT store..self_DB_TABLE_ROLE_STORE..." />
+            <marker date="1428386557826" expanded="true" signature="17956:18070" placeholder="SELECT shop_..self_DB_TABLE_ROLE_SHOP..." />
+            <marker date="1428386557826" expanded="true" signature="19199:19908" placeholder="INSERT INTO ..." />
+            <marker date="1428386557826" expanded="true" signature="20054:20209" placeholder="INSERT INTO ..." />
+            <marker date="1428386557826" expanded="true" signature="20356:20508" placeholder="INSERT INTO ..." />
+            <marker date="1428386557826" expanded="true" signature="20627:20676" placeholder="DELETE FROM ..." />
+            <marker date="1428386557826" expanded="true" signature="20702:20757" placeholder="DELETE FROM ..." />
+            <marker date="1428386557826" expanded="true" signature="20783:20837" placeholder="DELETE FROM ..." />
+            <marker date="1428386557826" expanded="true" signature="21094:21153" placeholder="DELETE FROM ..." />
+            <marker date="1428386557826" expanded="true" signature="21278:21335" placeholder="DELETE FROM ..." />
+            <marker date="1428386557826" expanded="true" signature="24288:24694" placeholder="SELECT date,..." />
+            <marker date="1428386557826" expanded="true" signature="24749:25152" placeholder="SELECT date,..." />
+            <marker date="1428386557826" expanded="true" signature="26737:26920" placeholder="SELECT date,..." />
+            <marker date="1428386557826" expanded="true" signature="26737:26921" placeholder="SELECT date,..." />
+            <marker date="1428386557826" expanded="true" signature="26737:27038" placeholder="SELECT date,..." />
+            <marker date="1428386557826" expanded="true" signature="26737:27264" placeholder="SELECT date,..." />
+            <marker date="1428386557826" expanded="true" signature="27314:27503" placeholder="SELECT date,..." />
+            <marker date="1428386557826" expanded="true" signature="27314:27566" placeholder="SELECT date,..." />
+            <marker date="1428386557826" expanded="true" signature="27314:27790" placeholder="SELECT date,..." />
+            <marker date="1428386557826" expanded="true" signature="28851:29206" placeholder="SELECT date,..." />
+            <marker date="1428386557826" expanded="true" signature="30513:30813" placeholder="SELECT quant..self_DB_TABLE_STOCK..." />
+            <marker date="1428386557826" expanded="true" signature="31429:31837" placeholder="SELECT store..self_DB_TABLE_STORE..." />
+            <marker date="1428386557826" expanded="true" signature="32352:33006" placeholder="SELECT store..self_DB_TABLE_STORE..." />
+            <marker date="1428386557826" expanded="true" signature="33923:34395" placeholder="SELECT date,..." />
+            <marker date="1428386557826" expanded="true" signature="34432:34763" placeholder="SELECT date,..." />
+          </folding>
         </state>
       </provider>
     </entry>
