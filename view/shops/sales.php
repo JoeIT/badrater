@@ -212,9 +212,13 @@ if( $up->isPageActionAllowed(PermissionType::SHOPS, PermissionType::SHOP_A) ||
 			
 		}
 	});
-	
+
+    <?php
+    if( $up->isPageActionAllowed(PermissionType::SHOPS_MOVEMENTS, PermissionType::MOV_A) ||
+    $up->isPageActionAllowed(PermissionType::SHOPS_MOVEMENTS, PermissionType::MOV_D)) {
+        ?>
 	$('#totalDaySales').html("<h3 align='center' > En caja Bs: " + $('#totalDayBsSales').val() + " - Sus: " + $('#totalDaySusSales').val() + "</h3>");
-	
+	<?php } ?>
 });
 
 function showWarningSaleShop(text)
@@ -247,6 +251,9 @@ $totalDaySusSales = 0;
 echo "<div id='totalDaySales'></div>";
 
 $control->sales($totalDayBsSales, $totalDaySusSales);
+
+if( $up->isPageActionAllowed(PermissionType::SHOPS_MOVEMENTS, PermissionType::MOV_A) ||
+    $up->isPageActionAllowed(PermissionType::SHOPS_MOVEMENTS, PermissionType::MOV_D)) {
 ?>
 
 <input type="button" name="bAddSale" id="bAddSale" value="Agregar venta" />
@@ -271,5 +278,8 @@ echo '<input type="hidden" id="totalDaySusSales" value="'. $totalDaySusSales .'"
 </body>
 </html>
 <?php
+
 include('items_shop_sales.php');
+
+}
 ?>

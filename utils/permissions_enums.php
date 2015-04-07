@@ -2,9 +2,9 @@
 abstract class PermissionType
 {
 	const PERMISSION = 'permission';
-	const STORE_V = 'store_v';
-	const STORE_A = 'store_a';
-	const STORE_D = 'store_d';
+	const STORE_V = 'store_v'; // View
+	const STORE_A = 'store_a'; // Add and modify
+	const STORE_D = 'store_d'; // Delete
 	const SHOP_V = 'shop_v';
 	const SHOP_A = 'shop_a';
 	const SHOP_D = 'shop_d';

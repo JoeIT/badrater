@@ -935,7 +935,7 @@ class QueryProcessor
 		while($row = mysqli_fetch_assoc($resulSet))
 		{
 			array_push($movements_array, array('date' => $row['date'],
-                                                'tyre' => $row['tyre_size'] .' '. $row['tyre_brand'] .' '. $row['tyre_brand'],
+                                                'tyre' => $row['tyre_size'] .' '. $row['tyre_brand'] .' '. $row['tyre_code'],
 												'entry_out' => $row['entry_out'],
 												'amount' => $row['amount']));
 		}
