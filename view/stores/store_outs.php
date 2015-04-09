@@ -274,9 +274,6 @@ if( $up->isPageActionAllowed(PermissionType::STORES_MOVEMENTS, PermissionType::M
 <?php
 }
 
-// Store outs table
-$control->store_entries_outs_table('out');
-
 if( $up->isPageActionAllowed(PermissionType::STORES_MOVEMENTS, PermissionType::MOV_A) ){
 	if( $control->is_virtual($_SESSION["idStore"]) )
 	{
@@ -284,7 +281,11 @@ if( $up->isPageActionAllowed(PermissionType::STORES_MOVEMENTS, PermissionType::M
 	}
 	else
 		echo '<input type="button" name="bAddOut" id="bAddOut" value="Agregar salida" />';
-} ?>
+}
+
+// Store outs table
+$control->store_entries_outs_table('out');
+?>
 
 
 <?php

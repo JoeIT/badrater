@@ -44,6 +44,8 @@ if( !empty($_POST['tyre_name']) &&
 	$rowLimiter = '@';
 	$colLimiter = '|';
 	$headerColspan = 4;
+    if(empty($tyreId))
+        $headerColspan = 5;
 	
 	$header = "$kardexName
 				<br>
@@ -77,7 +79,10 @@ if( !empty($_POST['tyre_name']) &&
 		</tr>
 		</thead><tbody>";
 	
-	$dataHeader = 'Fecha' . $colLimiter . 'Tipo' . $colLimiter . 'Entrada' . $colLimiter . 'Salida';
+	$dataHeader = 'Fecha' . $colLimiter;
+    if(empty($tyreId))
+        $dataHeader .= 'Llanta' . $colLimiter;
+    $dataHeader .= 'Tipo' . $colLimiter . 'Entrada' . $colLimiter . 'Salida';
 	
 	$store_id = $shop_id = '';
 
@@ -106,7 +111,13 @@ if( !empty($_POST['tyre_name']) &&
 
         $html .='<td>'.$type[ $data['entry_out'] ].'</td>';
 		
-		$dataTable .= $config->toExportDateFormat($data['date']) . $colLimiter . $type[ $data['entry_out'] ];
+		$dataTable .= $config->toExportDateFormat($data['date']);
+
+        if(empty($tyreId))
+            $dataTable .= $colLimiter . $data['tyre'];
+
+        $dataTable .= $colLimiter . $type[ $data['entry_out'] ];
+
 		if($data['entry_out'] == 'entry')
 		{
 			$html .= '<td align="right">'.$data['amount'].'</td>
@@ -142,8 +153,12 @@ if( !empty($_POST['tyre_name']) &&
 			<th align='right'>$totalOuts</th>
 		</tr>
 	</table>";
-	
-	$dataFooter = $colLimiter . $colLimiter . $totalEntries . $colLimiter . $totalOuts;
+
+    $dataFooter = '';
+    if(empty($tyreId))
+        $dataFooter .= $colLimiter;
+
+	$dataFooter .= $colLimiter . $colLimiter . $totalEntries . $colLimiter . $totalOuts;
 	
 	/*$html .= "<input type='button' id='exportIo' value='Exportar a excel'>";
 	

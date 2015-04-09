@@ -236,13 +236,13 @@ if( $up->isPageActionAllowed(PermissionType::STORES_MOVEMENTS, PermissionType::M
 <?php
 }
 
-// Store entries table
-$control->store_entries_outs_table('entry');
-
 if( $up->isPageActionAllowed(PermissionType::STORES_MOVEMENTS, PermissionType::MOV_A) ){
 ?>
 <input type="button" name="bAddEntryStore" id="bAddEntryStore" value="Agregar entrada" />
-<?php } ?>
+<?php }
+// Store entries table
+$control->store_entries_outs_table('entry');
+?>
 
 
 </body>

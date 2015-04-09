@@ -258,7 +258,6 @@ class QueryProcessor
 		$query .= ' ORDER BY date ';
 		
 		//$bd = DbConnectivity::getInstance();
-		
 		if(!($resulSet = $this->_bd->query($query)))
 			return false;
 		
@@ -347,8 +346,8 @@ class QueryProcessor
 			$where = " WHERE shop_id = $idShop ";
 		
 		$query = 'SELECT tyre_id, quantity FROM ' .self::DB_TABLE_STOCK. " $where ";
-		
-		if( !($resulSet = $this->_bd->query($query)) )
+
+        if( !($resulSet = $this->_bd->query($query)) )
 			return array();
 		
 		$stockArray = array();
@@ -1020,18 +1019,24 @@ class QueryProcessor
 	
 	public function query_kardex_outs($shop_id, $tyre_id, $type, $dateIni, $dateEnd)
 	{
-		if( !empty($type) )
+        $where = '';
+        if( !empty($tyre_id) )
+            $where = " AND eo.tyre_id = $tyre_id ";
+
+        if( !empty($type) )
 			$type = " AND entry_out = '$type' ";
         else
             $type = " AND entry_out != 'entry' ";
 		
-		$query = 'SELECT date, entry_out, s.shop_name, amount FROM '.self::DB_TABLE_SHOP_E_O.' as eo
-																	LEFT JOIN '.self::DB_TABLE_SHOP." as s ON eo.source_shop = s.shop_id
-																WHERE eo.shop_id = $shop_id
-																	AND tyre_id = $tyre_id
-																	$type
-																	AND date >= '$dateIni'
-																	AND date <= '$dateEnd' ";
+		$query = 'SELECT date, entry_out, s.shop_name, amount, tyre.tyre_size, tyre.tyre_brand, tyre.tyre_code
+                  FROM '.self::DB_TABLE_SHOP_E_O.' as eo
+                     LEFT JOIN '.self::DB_TABLE_SHOP." as s ON eo.source_shop = s.shop_id
+                     LEFT JOIN ".self::DB_TABLE_TYRE." as tyre ON tyre.tyre_id = eo.tyre_id
+                  WHERE eo.shop_id = $shop_id
+                     $where
+                     $type
+                     AND date >= '$dateIni'
+                     AND date <= '$dateEnd' ";
 
         if( !($resulSet = $this->_bd->query($query)) )
 			return array();
@@ -1040,7 +1045,8 @@ class QueryProcessor
 		
 		while($row = mysqli_fetch_assoc($resulSet))
 		{
-			array_push($movements_array, array('date' => $row['date'], 
+			array_push($movements_array, array('date' => $row['date'],
+                                                'tyre' => $row['tyre_size'] .' '. $row['tyre_brand'] .' '. $row['tyre_code'],
 												'entry_out' => $row['entry_out'], 
 												'destination' => $row['shop_name'], 
 												'amount' => $row['amount']));

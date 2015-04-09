@@ -32,6 +32,8 @@ if( !empty($_POST['tyre_name']) &&
 	$rowLimiter = '@';
 	$colLimiter = '|';
 	$headerColspan = 4;
+    if(empty($tyreId))
+        $headerColspan = 5;
 	
 	$header = "$kardexName
 				<br>
@@ -53,14 +55,21 @@ if( !empty($_POST['tyre_name']) &&
 	<table border='0' align='center' width='100%' id='kardexOutsTable' class='tablesorter' >
 		<thead>
 		<tr>
-			<th width='10%'>Fecha</th>
-			<th width='40%'>Tipo</th>
+			<th width='10%'>Fecha</th>";
+
+    if(empty($tyreId))
+        $html .= "<th width='30%'>Llanta</th>";
+
+    $html .= "<th width='40%'>Tipo</th>
 			<th width='40%'>Tienda destino</th>
 			<th width='10%'>Cantidad</th>
 		</tr>
 		</thead><tbody>";
 	
-	$dataHeader = 'Fecha' . $colLimiter . 'Tipo' . $colLimiter . 'Tienda destino' . $colLimiter . 'Cantidad';
+	$dataHeader = 'Fecha' . $colLimiter;
+    if(empty($tyreId))
+        $dataHeader .= 'Llanta' . $colLimiter;
+    $dataHeader .= 'Tipo' . $colLimiter . 'Tienda destino' . $colLimiter . 'Cantidad';
 		
 	$dataArr = $control->outs( $shop_id, $tyreId, $type, $config->toBdDateFormat($dateIni), $config->toBdDateFormat($dateEnd) );
 
@@ -74,31 +83,47 @@ if( !empty($_POST['tyre_name']) &&
 		
 		$html .= 
 			'<tr>
-				<td>'.$config->toUsrDateFormat($data['date']).'</td>
-				<td>'.$type.'</td>
+				<td>'.$config->toUsrDateFormat($data['date']).'</td>';
+
+        if(empty($tyreId))
+            $html .='<td>'.$data['tyre'].'</td>';
+
+        $html .='<td>'.$type.'</td>
 				<td>'.$data['destination'].'</td>
 				<td align="right">'.$data['amount'].'</td>';
 			
 			$total += $data['amount'];
 		
-		$dataTable .= $config->toExportDateFormat($data['date']) 
-					. $colLimiter . $type
-					. $colLimiter . $data['destination']
+		$dataTable .= $config->toExportDateFormat($data['date']);
+
+        if(empty($tyreId))
+            $dataTable .= $colLimiter . $data['tyre'];
+
+        $dataTable .= $colLimiter . $type
+                    . $colLimiter . $data['destination']
 					. $colLimiter . $data['amount']
 					. $rowLimiter;
 		
 		$html .= '</tr>';
 	}
+
+    $rows = 3;
+    if(empty($tyreId))
+        $rows = 4;
 		
 	$html .= 
 		"</tbody>
 		<tr>
-			<td colspan='3'>&nbsp;</td>
+			<td colspan='".$rows."'>&nbsp;</td>
 			<th align='right'>$total</th>
 		</tr>
 	</table>";
-	
-	$dataFooter = $colLimiter . $colLimiter . $colLimiter. $total;
+
+    $dataFooter = '';
+    if(empty($tyreId))
+        $dataFooter .= $colLimiter;
+
+    $dataFooter .= $colLimiter . $colLimiter . $colLimiter. $total;
 	
 	$exportLink = "<h3><a href='../utils/excel_generator.php?name=$kardexName&header=$header&headerColspan=$headerColspan&colHeaders=$dataHeader&table=$dataTable&footer=$dataFooter'>..Exportar..</a></h3>";
 

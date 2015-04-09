@@ -156,16 +156,16 @@ function tyreWarningReset()
 
 <?php
 
-// Tyres table
-$control->tyres_table();
-
 include('item_tyre.php');
 
 $up = new UsrPermission();
 if( $up->isPageActionAllowed(PermissionType::TYRES, PermissionType::TYRE_A) ){
 ?>
 <input type="button" name="bAddTyre" id="bAddTyre" value="Agregar llanta" />
-<?php } ?>
+<?php }
+// Tyres table
+$control->tyres_table();
+?>
 
 </body>
 </html>

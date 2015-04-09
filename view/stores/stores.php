@@ -160,17 +160,15 @@ function storeWarningReset()
 <body>
 
 <?php
-
-// Stores table
-$control->store_table();
-
-
 include('item_store.php');
 
 if( $up->isPageActionAllowed(PermissionType::STORES, PermissionType::STORE_A) ){
 ?>
 <input type="button" name="bAddStore" id="bAddStore" value="Agregar dep&oacute;sito" />
-<?php } ?>
+<?php }
+// Stores table
+$control->store_table();
+?>
 
 </body>
 </html>
