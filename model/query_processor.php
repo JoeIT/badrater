@@ -974,23 +974,23 @@ class QueryProcessor
 
         if( !empty($store_id) )
 			$query = 'SELECT date, supplier.name, employee, amount, tyre.tyre_size, tyre.tyre_brand, tyre.tyre_code
-                    FROM '.self::DB_TABLE_STORE_E_O.' as eo
-                    LEFT JOIN '.self::DB_TABLE_TYRE.' as tyre ON tyre.tyre_id = eo.tyre_id
-                    LEFT JOIN '.self::DB_TABLE_SUPPLIER." as supplier ON supplier.supplier_id = eo.supplier_id
-												WHERE store_id = $store_id
-												    $where
-													AND entry_out = 'entry'
+                    FROM '.self::DB_TABLE_STORE_E_O.' as eo 
+                    LEFT JOIN '.self::DB_TABLE_TYRE.' as tyre ON tyre.tyre_id = eo.tyre_id 
+                    LEFT JOIN '.self::DB_TABLE_SUPPLIER." as supplier ON supplier.supplier_id = eo.supplier_id 
+												WHERE store_id = $store_id 
+												    $where 
+													AND entry_out = 'entry' 
 													AND date >= '$dateIni' 
 													AND date <= '$dateEnd' ";
 		
 		else if( !empty($shop_id) )
-			$query = 'SELECT date, employee AS name, employee, amount, tyre.tyre_size, tyre.tyre_brand, tyre.tyre_code
-                      FROM '.self::DB_TABLE_SHOP_E_O.' as eo
-                      LEFT JOIN '.self::DB_TABLE_TYRE.' as tyre ON tyre.tyre_id = eo.tyre_id'.
-			                                    "WHERE shop_id = $shop_id
-			                                        $where
-													AND entry_out = 'entry'
-													AND date >= '$dateIni'
+			$query = 'SELECT date, employee AS name, employee, amount, tyre.tyre_size, tyre.tyre_brand, tyre.tyre_code 
+                      FROM '.self::DB_TABLE_SHOP_E_O.' as eo 
+                      LEFT JOIN '.self::DB_TABLE_TYRE.' as tyre ON tyre.tyre_id = eo.tyre_id '.
+			                                    "WHERE shop_id = $shop_id 
+			                                        $where 
+													AND entry_out = 'entry' 
+													AND date >= '$dateIni' 
 													AND date <= '$dateEnd' ";
 
             /*$query = 'SELECT date, supplier.name, employee, amount FROM '.self::DB_TABLE_STORE_E_O.' as eo,
